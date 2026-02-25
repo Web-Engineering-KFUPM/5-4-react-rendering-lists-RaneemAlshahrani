@@ -29,16 +29,15 @@ export default function CourseCard({ course, index, onMutateCourse }) {
     <article className="course card">
       <header className="cardHeader">
         <h2>{course.title}</h2>
-        {allDone && (<span className="badge">All caught up</span>)}
+        {hasTasks&&allDone && <span className="badge">All caught up</span>}
       </header>
 
       <section className="tasksSection">
 
-        {courses.task.length === 0 && (<p className="muted">No tasks yet.</p>)}
-        tasks.length === 0 && <p>No tasks yet.</p>
+        {course.tasks.length === 0 && (<p className="muted">No tasks yet.</p>)}
         
         <ul className="tasks">
-        {courses.task.map((task) => (
+        {course.tasks.map((task) => (
           <TaskItem key={task.id} task={task} onToggle={toggleTask} onDelete={deleteTask}/>
         ))}
         </ul>

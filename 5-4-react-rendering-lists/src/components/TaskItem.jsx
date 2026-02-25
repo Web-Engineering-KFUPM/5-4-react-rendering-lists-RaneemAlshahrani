@@ -9,7 +9,7 @@ export default function TaskItem({ task, onToggle, onDelete }) {
             Also make it reflect task.isDone using checked={task.isDone} */}
         <input type="checkbox"   checked={task.isDone} onChange={() => onToggle(task.id)} />
 
-        !task.isDone && <DueBadge dueDate={task.dueDate} />
+        {!task.isDone && <DueBadge dueDate={task.dueDate} />}
 
               <span className="title">{task.title}</span>
       </label>

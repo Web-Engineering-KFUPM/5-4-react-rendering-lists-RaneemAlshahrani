@@ -138,7 +138,7 @@ export default function App() {
       </header>
 
       <section className="grid">
-        {courses.map((course) => (
+        {courses.map((course, idx) => (
           <CourseCard key={course.id} course={course} index={idx} onMutateCourse={mutateCourseByIndex}/>
           ))}
         

@@ -36,7 +36,7 @@ export default function DueBadge({ dueDate }) {
   } else if(d === 1){
     label = "Due tomorrow";
   } else{
-    label = 'Due in ${d} days';
+    label = "Due in ${d} days";
   }
 
   return <span className="badge">{label}</span>;
